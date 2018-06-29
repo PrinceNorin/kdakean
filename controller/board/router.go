@@ -11,5 +11,6 @@ func init() {
 	g := r.Group("/api", middleware.APIAuthMiddleware)
 	{
 		g.POST("/boards", PostBoardHandler)
+		g.PUT("/boards/:id", PutBoardHandler)
 	}
 }
